@@ -31,7 +31,7 @@ const App = () => {
   };
 
   const checkLogin = () => {
-    axios.post("http://localhost:3000/post_login", {
+    axios.post("https://backend-dashboard-empatechny.onrender.com/post_login", {
       username: formData.username,
       password: formData.password
     }).then((res) => {
@@ -46,7 +46,7 @@ const App = () => {
   }
 
   const obtenerReportes = () => {
-    axios.get("http://localhost:3000/get_reportes")
+    axios.get("https://backend-dashboard-empatechny.onrender.com/get_reportes")
     .then((res) => {
       let resultado = res.data
       setReportes(resultado)
